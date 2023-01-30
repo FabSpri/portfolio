@@ -1,0 +1,491 @@
+<!DOCTYPE HTML>
+<!--
+	
+-->
+<html>
+	<head>
+		<title>Fabian Springer - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" display:none alt="" /></a>
+				
+		        </div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					
+
+				<!-- Two -->
+					<section id="two">
+						<h2>The RX Vega64 - AMD´s abandoned HBM2 consumer card.</h2>
+						
+						<h6>
+							<br><br>
+
+							 The Vega56/64 and the RadeonVII were the first (and to this day only) consumer grade GPUs to feature HBM2 memory. Deviating from classical board designs, multiple memory modules are incorporated in one multi-layer stack and connected to the GPU via silicon based imposers. The modules are mounted in unison with the GPU Core on a combined package.  
+							 This technology offers some benefits in regards to cooling, power consumption, signal integrity and memory intensive workloads, as well as lower frequency requirements to achieve comparable performance, all due to the much higher bandwidth compared to PCB mounted GDDR5 or GDDR6 memory. 
+							 <br><br> 
+							 The innovative design never really took off on consumer markets however. The main reasons were initial driver issues, questionable power and frequency management, susceptible GPU/memory package architecture that was prone to technical failures in earlier production runs, as well as rather high prices compared to competing cards from Nvidia at the time. In addition AMDs reference boards had abysmal cooling solutions, further skewing initial market reception.
+							 After releasing the Vega64, the Vega56 and RadeonVII, a productivity focused card, AMD went back to the classic PCB based memory architecture with their 5000s series. The technology is still under further development, but exclusively features in professional business and server grade products and applications, both from AMD and Nvidia. 
+							 <br><br>
+					 		<article class="col-6 col-12-xsmall work-item">
+							 <a href="images/fulls/vega64_b.jpg" class="image fit thumb"><img src="images/thumbs/vega64_b.jpg" alt="" /></a>
+							 <h3><i></i></h3>
+					 		</article>
+							 Despite their botched release there is a lot of potential in these cards today and many of the teething troubles were fixed by board partners, AMDs excellent long term driver support, and production cycle improvements in later badges. Especially in second hand markets the Vega cards run rather cheap and offer a lot of bang for the buck with plenty of headroom to tweak the performance and power management. This enables them to compete with mid-range RTX 2000 series cards in rendering workloads, or even surpassing high-end products of later generation in memory bandwith dependend applications.
+							 <br><br>
+							 Non-surprisingly they were rather well regarded by crypto-currency miners. And despite my personal reservations against the whole idea of crypto-currencies in their current iterations, i usually don´t have issues to buy functioning cards out of the hands of cryptominers. Well, at least the kind leaving a rather professional impression. They are usually well maintained and can be expected to run under conditions optimized for power and thermal efficiency. They are also and usually handled with care while cards with inherent technical flaws don´t survive extended mining operations and hence get removed from the pool rather quickly. 
+							 <br><br>
+							 So that´s what this is. A PowerColor RX Vega64 in almost mint condition that mined coins of questionable economic and envrionmental validity for two years. And due to these circumstances i was able to acquire it for just under a 170 Euros, even before we saw significant GPU price drops in the aftermath of the crypto-crash. I had been looking for one of these for years, mostly out of sheer interest for the HBM2 dependend architecture, but could never justify spending upwards of 300 bucks for a mere pet-project during the days of the silicon crisis and crypto-craze. 
+							<br><br> 
+							 As was already mentioned, i acquired the card in a really well preserved state, which confirmed the sellers statements regarding the professional circumstances of its previous life as a mining card. There wasn´t a single speck of dust or scratch to be found and no visible physical damage to the card. Removing the cooler and checking major and minor rails for resistances went well and it became apparent that the card had not been disassembled or modified previously. The card still had its original BIOS, which isn´t a common sight when it comes to ex mining-cards. Inspecting the PCB held little surprises. The PowerColor PCB is mostly derrived from AMDs reference design and its according specs regarding SMD components.
+							 A 12-phase HEXFET VDDC is accompanied by a single-phase VDDM, which might appear rather anemic when compared to non-HBM2 boards, but is completely sufficient in this case. The real improvement over the reference design is the well thought out 3-fan cooling solution, featuring a beefy heatpipe array, as well as a tripple BIOS for different modes of power management operation, offering quickly accessible but rather gimmicky options regarding fan speed curves and power limits.    
+							<br><br>
+							After repasting the card and installing new thermal pads it was time for a first spin. The card booted up flawlessly and ran stable for an hour while submitting it to the FurMark stress test. A first performance test with Superposition turned out to deliver rather disapointing results. This was to be expected however, since PowerColor used AMDs reference specs and clocks in the design of their version of the card. It was loud, rather power hungry for dissapointing levels of performance. It also never came close to its advertised boost clocks. It was however never reaching core and memory temperatures above 55°C, even with very moderate fan speed curves.   
+							<br><br>
+							So this is where the fun begins. There are a few things to know about the Vega cards if one wants unlock their full potential: 1) The overclocking margins of the HBM2 memory. Stock frequencies are set to 945Mhz. It´s capable of much higher clock speeds under reference voltage supply with little compromie regarding temperatures due to the low power nature of HBM2 memory. 2) The boost algorithm is heavily dependend on the package power draw variable of the equation. This offers the opportunity to reducce the power draw by undervolting to boost frequencies and average core clocks, so to speak. 3) Vegas GCN5 architecture is very generous when it comes to maintaining stable functionality under reduced voltages and rather high clock frequencies.
+							So unlike with many other GPUs the idea behind significantly boosting the cards performance goes like this: You actually feed less voltage into it instead of stabilizing higher core clocks with higher voltages. This reduces the power draw of the Core/HBM2 package to trick the boost algorithm into going full throttle on the core clocks, all while monitoring temerpatures and stability. Only then does one start to adjust the power limits according to the personal needs and wants regarding temperatures and overall power consumption. Overclocking the HBM2 memory to whatever margins temperatures and stable operation allow under standard or slightly tweaked VCCM parameters also offer a significant boost in performance. Make sure to not exceed memory temperatures above 75°C however, because unlike its GDDR5/6 counterparts HBM memory doesn´t like temperatures exceeding 80°C.  
+							<br><br>
+							Depending on which aspects you focus on, you can either boost the GPUs performance significantly while maintaining power consumption. Reduce power consumption while maintaining performance. Or go all out and boost performance and power consumption to whatever margins the proper cooling solution of the partner board and silicon can handle under acceptable (or non acceptable) risks. If that doesn´t cut it, you might still have some headroom in regards to overclocking maximum core clocks while slightly raising VDDC again. Allthough the capabilities of the silicon and ASIC quality will become the predominant factors here, rather than power limits and cooling capacity.      
+							<br><br>
+							After extended testing with AMDs driver integrated version of wattman, FurMark, Superposition and the Folding@home client, i found that reducing the VDDC voltage in the 6th and 7th power stages from 1,2V and 1,15V to 1,045V and 1,035V respecitvely offered the best overall boost clock gains in combination with a 50% power limit increase (220 -> 330 Watts). However the reduced core voltage meant the package power draw never exceeded 270 Watts at full GPU utilisation. Running stock voltages didn´t improve core clocks and performance to a significant degree but implied a higher power draw, easily reaching the cards +50% power limit at 330 Watts. Rendering Benchmark results increased by roughly 5% under these conditions. The biggest performance gains could be achieved by overcloking the HBM2 memory however, which turned out to run stable and in the 60°C range at 1100Mhz, while uplifting the Benchmark results to a 19-20% gain compared to stock settings. Further boosting memory clocks and core clocks proved to be unsustainable with undervolted VDDC.
+							Undervolting the GPU 150mV while raising the memory clock to 1100Mhz turned out to produce almost linearly scaling gains in terms of performance compared to additional power consumption and adequate temperatures. Kind off unheard off regarding bessically any other line of consumer grade GPUs. 
+							<br>
+							<br>
+							Tweaking the card for power efficiency turned out to be a bit more complicated, at least at high levels of GPU utilisation. Applying a slight undervolting (around 20-30 mV) got me some improvements in terms of power consumption while boost clocks remained stable and there was no significant drawback in terms of rendering performance. 10-15 Watt reduction under full load conditions is still pretty neat after all.
+							All in all i still have some digging to do here. I still think there is some room for improvement regarding power tables and boost clocks. I collected all sensor data readouts during the testing phase and will do some proper analysis in the future. Performance wise the card now settles itself comfortably betweeen a stock GTX 1080, RTX 2070 and 1080Ti without technically overclocking it, raising voltages above stock settings or compromising on temperatures. Which is quite remarkable regarding its price and power consumption. I´ll definetely keep this one around and am looking forward towards putting it through some memory related workloads.
+							<br><br>
+			
+							<div class="row">
+								
+								<article class="col-6 col-12-xsmall work-item">
+										<a href="images/fulls/vega64_a.jpg" class="image fit thumb"><img src="images/thumbs/vega64_a.jpg" alt="" /></a>
+										<h3><i>Fig. 1: Well, the looks need some getting used to, but in the end that´s of secondary concern .</i></h3>
+								</article>
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/vega64_c.jpg" class="image fit thumb"><img src="images/thumbs/vega64_c.jpg" alt="" /></a>
+									<h3><i>Fig. 2: In contrast to AMD the PowerColor version of the Vega64 actually has a cooling solution worth its title.</i></h3>
+								
+								</article>
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/vega64_e.jpeg" class="image fit thumb"><img src="images/thumbs/vega64_e.jpeg" alt="" /></a>
+									<h3><i>Fig. 3: The rather unremarkable PCB of the PowerColor RX Vega64.</i></h3>
+									
+								</article>
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/vega64_d.jpg" class="image fit thumb"><img src="images/thumbs/vega64_d.jpg" alt="" /></a>
+									<h3><i>Fig. 3: AMDs wattman software offers plenty of tweaking opportunity as long as you don´t plan to substantially modify power tables. </i></h3>
+									
+								</article>
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/vega64_f.jpg" class="image fit thumb"><img src="images/thumbs/vega64_f.jpg" alt="" /></a>
+									<h3><i>Fig. 3: Best score after 2 days of tweaking with a max boost clock of 1700Mhz, memory clock of 1100Mhz and a 100mV undervolt at +50% power limit. While overall temps were looking excellent, hotspot temps were getting kind of funky at this point.</i></h3>
+									
+								</article>
+							
+							</div>
+							
+					
+							
+							<br><br>
+							
+
+							
+							
+						   </h6>
+						
+						<div class="row">
+							
+						</div>
+						<ul class="actions">
+							<li><a href="RW.html" class="button">Back</a></li>
+						</ul>
+					</section>
+
+				<!-- Three -->
+				<section id="three">
+					<h2>Get In Touch</h2>
+					<p><h6></h6></p>
+					
+					<div class="row">
+						<div class="col-0 col-12-small">
+							<form method="post" action="#">
+								
+							</form>
+							
+						</div>
+						<div class="col-4 col-12-small">
+							<ul class="labeled-icons">
+								<li>
+									<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+									
+									Osnabrück, NDS<br />
+									Germany
+								</li>
+							
+								<li>
+									<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+									0176-47010954
+								</li>
+							
+								<li>
+									<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+									<a href="mailto:fabian.springer@protonmail.com">fabian.springer@protonmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>s
+
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+						
+					</ul>
+					<ul class="copyright">
+						<li>&copy; F. Springer 2022</li><li></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
