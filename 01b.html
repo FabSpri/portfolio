@@ -1,0 +1,516 @@
+<!DOCTYPE HTML>
+<!--
+	
+-->
+<html>
+	<head>
+		<title>Fabian Springer - Portfolio</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+	</head>
+	<body class="is-preload">
+
+		<!-- Header -->
+			<header id="header">
+				<div class="inner">
+					<a href="#" class="image avatar"><img src="images/avatar.jpg" display:none alt="" /></a>
+				
+		        </div>
+			</header>
+
+		<!-- Main -->
+			<div id="main">
+
+				<!-- One -->
+					
+
+				<!-- Two -->
+					<section id="two">
+						<h2>Taking a gamble on broken Smartphones.</h2>
+						
+						<h6>I´m usually not too big on smartphones, at least when it comes to reintroducing them to second hand markets. In this day and age they´re designed and deliberately engineered as throwaway items, a catastrophy in terms of consumer rights and environmental damage. While they are still easily repairable from a technical point of view, the disassembly is often made as finnicky and irreversible as possible. Most modern units make heavy use of glue to hold the case and parts in place. Without a lot of care and patience it´s easy to cause permanent damage in the process. This makes smartphone repairs rather time consuming and inefficient when reckoned up against after market prices.
+							This looks a bit different when factoring in repairs as a service, either for reasons of data recovery or to maintain mid to high end units. Or for personal use, of course.    
+							<br><br>
+							The later was the incentive for this little project. My 6 year old device had sustained significant damage over the years, including a cracked screen, a faulty extension card slot, and a blown battery. What ultimately put the nail in the coffin was a damaged USB charging port. I performed a quick provisional fix to backup the data via Bluetooth (<i>Fig. 1</i>), but it was clear at this point that there was little incentive to fix all the issues to a satisfying degree with reasonable investments of time and money. A pitty, since the main components were good to go, i was still quite satisfied with the performance and had rooted the phone years ago while installing LineageOS. So keeping software up to date was not an issue either. It had a good run, but it was time for a replacement.
+							<br><br>
+							After searching for a few days i found an intersting offer. A bundle of five partly damaged smartphones for 70 Euros (<i>Fig. 2</i>). Three were mid-range phones, two released in the last two to three years, one in the last five. The other two were older models and had cracked screens but were otherwise fully functional. Perfect candidates for becoming part donors or outdoor phones, especially since one of them was very light and compact. Of the three more interesting phones one was fully functional but had a cracked screen (Honor P8). One was functional and in almost mint condition, but the microphone was not working (Xiaomi Redmi Note 9 Pro). And the last one (Samsung Galaxy A50) was not functional at all but was also in mint visual condition. I took a bit of a gamble on the Samsung Galaxy A50, but as it turned out its problems were rather simple to fix.
+							<br><br>
+							<div class="row">
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/sp1.jpg" class="image fit thumb"><img src="images/thumbs/sp1.jpg" alt="" /></a>
+									<h3><i>Fig. 1: Well, it ain´t pretty. But if it works, it works. A quick fix so i could charge the battery one last time to rescue some data.</i></h3>
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/sp2.jpg" class="image fit thumb"><img src="images/thumbs/sp2.jpg" alt="" /></a>
+								<h3><i>Fig. 2: Four of the five smartphones with various defects. The fifth one, an LG G3, was used to take the picture - with rather questionable results. The three phones to the left are the main focus of this project however.</i></h3>
+							
+							</article>
+							</div>
+							
+							<u>Xiaomi Redmi Note 9 Pro</u><br><br>
+							After an intital inspection the phone turned out to be in mint condition. As advertised the microphone wasn´t picking up any sound, but was producing constant noise with a rather clear defined amplitude. In this case the crystal based digital microphone and corresponging circuitry was located on the PCB housing the USB-C port and the headphone jack. During some quick measurements i noticed that the data_out line was reading a constant voltage, probably due to an internal failure of the microphone package. I had previously salvaged some replacement microphones, but none had the right pinout configuration or package size (<i>Fig. 3</i>). While it would have been possible to bridge the corresponding solder pads with wires, there was little room to work with once the speaker element was put back into the case. While checking the prices for a replacement microphone i noticed that the entire PCB was available for just under 10 Euros (depending on configuration and additonal filter caps). A single SMD microphone was hard to come by at significantly cheaper prices and sensible amounts of logistical effort. So i decided to replace the whole PCB assembly, going with a higher quality version for around 10 Euros. Switching the PCB was an easy task and fixed the microphone issue. Otherwise the phone was in excellent condition. This fix alone more than made up for the initial investment.    
+							<br><br>
+							<div class="row">
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/sp3.jpg" class="image fit thumb"><img src="images/thumbs/sp3.jpg" alt="" /></a>
+								<h3><i>Fig. 3: Xiaomi Redmi Note 9 Pro: The desoldered, disfunctional microphone and some of the replacements i initially considered. Though technically possible, i decided against improvising a fix with non matching package sizes and pinouts. </i></h3>
+								
+							</article>
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/sp4.jpg" class="image fit thumb"><img src="images/thumbs/sp4.jpg" alt="" /></a>
+								<h3><i>Fig. 4: The cheap replacement PCB i acquired for under 10 Euros. Cheaper options were available as well but were compromising on filter caps and circuitry regarding fast charging options.</i></h3>
+								
+							</article>	
+							<article class="col-6 col-12-xsmall work-item">
+								<a href="images/fulls/sp6.jpg" class="image fit thumb"><img src="images/thumbs/sp6.jpg" alt="" /></a>
+								<h3><i>Fig. 5: Replacing the board containing the microphone fixed the issue. The phone was now back in working order. Patient No. 1 is back in business. </i></h3>
+								
+							</article>	
+							
+							</div>
+
+							
+							<u>Samsung Galaxy A50</u><br><br>
+							This phone appeared to be completely dead. I quickly noticed however that the back cover was not seated properly. There were no signs that it had been removed prior to my purchase. After disassembling the phone it turned out that the battery had failed and was buldging up. Luckily it suffered no further mechanical damage or leakage. I carefully removed the impending fire hazard to mitigate the risks of it blowing up completely<i>(Fig. 6:)</i>. Now the phone gave a quick sign of life while attaching a charging cable despite refusing to complete the boot cycle. Yet this had me in good hopes that a simple battery replacement would fix the issue. I found the corresponding model for just under 9 Euros, making it a sensible investment, allthough i still couldn´t be sure that there weren´t any further issues.
+							<br><br>
+							As it turned out there weren´t any however, at least in terms of technical functionality. After replacing the battery the phone booted up just fine. I quickly ran into the problem that is Samsungs enforced Google FRP protection, where even when you factory reset the phone it will still asks you to verify the previously registered Google account. This was a problem indeed, since this was the only phone i acquired from the buyer, that was not factory reset before the purchase. The corresponding unlock pattern was long lost however and for obvious reasons handing over the login credentials for the corresponding account wasn´t an option. After hours of researching the topic i finally stumbled across a bypass. I won´t go into detials here since options like these are firmly seated within grey areas of data security at best, but it enabled me to define my own verification method to continue with the factory reset. This method involved deliberately crashing the interface of the installation routine by input flooding and hotswaping SIM cards to gain access to UI elements usually not accessible during the setup process.
+							Since the data wipe was already performed previously by utilizing the boot menu and account credentials and details could not be accessed either way, i decided that this was a morally acceptable procedure to prevent the phone from becoming unusable. After setting up the phone with my personal data, the phone turned out to work just fine. <i>(Fig. 7)</i>
+							<br><br>
+							<div class="row">
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/sp5.jpg" class="image fit thumb"><img src="images/thumbs/sp5.jpg" alt="" /></a>
+									<h3><i>Fig. 6: Samsung Galaxy A50: The most wonky piece of the bundle since i couldn´t test it for basic functionality. It wouldn´t even turn on. The battery had failed, as it turned out a rather common problem with this generation of Samsung phones. Luckily it didn´t leak or had blown up.  </i></h3>
+									
+								</article>	
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/sp7.jpg" class="image fit thumb"><img src="images/thumbs/sp7.jpg" alt="" /></a>
+									<h3><i>Fig. 7: Samsung Galaxy A50: The most wonky piece of the bundle since i couldn´t test it for basic functionality. It wouldn´t even turn on. The battery had failed, as it turned out a rather common problem with this generation of Samsung phones. Luckily it didn´t leak or had blown up.  </i></h3>
+									
+								</article>	
+							</div>
+							<u>Huawei Honor 8</u><br><br>
+							Apart from the broken glass cover of the LCD screen, this phone was fully functional. Removing the screen was a straightforward albeit messy task. Carefully applying heat with the rework station on lowest settings liquified the glue and enabled me to extract the glass with the help of some razor blades <i>(Fig. 8)</i>. The LCD display stayed intact during this procedure, but when looking at prices for replacement parts i quickly figured out that salvaging the LCD screen made little sense. Complete packages, containing the glass cover, the LCD screen and backlight assembly come for around 20 Euros. <i>(Fig. 9)</i> I ordered a new one, but delivery will take some time. 
+							<br><br>
+							<div class="row">
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/sp8.jpg" class="image fit thumb"><img src="images/thumbs/sp8.jpg" alt="" /></a>
+									<h3><i>Fig. 8: Huawei Honor 8: A fully functional phone, but the screen had seen some rough times.  </i></h3>
+									
+								</article>	
+								<article class="col-6 col-12-xsmall work-item">
+									<a href="images/fulls/sp9.jpg" class="image fit thumb"><img src="images/thumbs/sp9.jpg" alt="" /></a>
+									<h3><i>Fig. 9: The screen came off without further problems, however the replacement part didn´t arrive in time.  </i></h3>
+									
+								</article>	
+							</div>
+					
+							<u>LG G3 and HTC Desire C</u><br><br>
+							Both of these phones were working perfectely fine but had cracked screens. Due to their age i decided against performing extensive repair attempts. Both will become part donors for SMD components in case the need arises or serve as replacement phones in case of a technical emergency.   
+							<br><br>
+							<u>Conclusion</u><br><br>
+							So all in all, what did we get for 70 bucks? We got three partly damaged and/or non-functional smartphones, two of which are mid-class models released within the last two years. One, the Honor 8, being a tad older but still adequate in terms of security updates and performance. The combined second hand market value of these three phones alone currently exceeds 300 Euros, regarding their good to mint condition. Roughly 40 Euros were spend on replacement parts, amounting to total costs of around 110 Euros. On top of that i got two fully functional old-timers, which can be used for future projects or in case of an emergency. All in all i´d argue that this was a rather neat deal which involved a manageable amount of neccessary fault finding and repairs, saving fiver phones from wandering straight into a garbage bin. Not too shabby.    
+							<BR><BR>
+								<div class="row">
+									<article class="col-6 col-12-xsmall work-item">
+										<a href="images/fulls/spf.jpg" class="image fit thumb"><img src="images/thumbs/spf.jpg" alt="" /></a>
+										<h3><i>Fig. 6: The final result of this endeavour. Three fully functional mid-class phones (once the screen replacement arrives) and two fully functional old-timers, one of which was used to take this picture. Not bad for an investment of 110 Euros.</i></h3>
+										
+									</article>	
+								</div>
+						
+							
+					
+							
+						
+							
+
+							
+							
+						   </h6>
+						
+						<div class="row">
+							
+						</div>
+						<ul class="actions">
+							<li><a href="RW.html" class="button">Back</a></li>
+						</ul>
+					</section>
+
+				<!-- Three -->
+				<section id="three">
+					<h2>Get In Touch</h2>
+					<p><h6></h6></p>
+					
+					<div class="row">
+						<div class="col-0 col-12-small">
+							<form method="post" action="#">
+								
+							</form>
+							
+						</div>
+						<div class="col-4 col-12-small">
+							<ul class="labeled-icons">
+								<li>
+									<h3 class="icon solid fa-home"><span class="label">Address</span></h3>
+									
+									Osnabrück, NDS<br />
+									Germany
+								</li>
+							
+								<li>
+									<h3 class="icon solid fa-mobile-alt"><span class="label">Phone</span></h3>
+									0176-47010954
+								</li>
+							
+								<li>
+									<h3 class="icon solid fa-envelope"><span class="label">Email</span></h3>
+									<a href="mailto:fabian.springer@protonmail.com">fabian.springer@protonmail.com</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</section>
+
+				<!-- Four -->
+				<!--
+					<section id="four">
+						<h2>Elements</h2>
+
+						<section>
+							<h4>Text</h4>
+							<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
+							This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
+							This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
+							<hr />
+							<header>
+								<h4>Heading with a Subtitle</h4>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<header>
+								<h5>Heading with a Subtitle</h5>
+								<p>Lorem ipsum dolor sit amet nullam id egestas urna aliquam</p>
+							</header>
+							<p>Nunc lacinia ante nunc ac lobortis. Interdum adipiscing gravida odio porttitor sem non mi integer non faucibus ornare mi ut ante amet placerat aliquet. Volutpat eu sed ante lacinia sapien lorem accumsan varius montes viverra nibh in adipiscing blandit tempus accumsan.</p>
+							<hr />
+							<h2>Heading Level 2</h2>
+							<h3>Heading Level 3</h3>
+							<h4>Heading Level 4</h4>
+							<h5>Heading Level 5</h5>
+							<h6>Heading Level 6</h6>
+							<hr />
+							<h5>Blockquote</h5>
+							<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
+							<h5>Preformatted</h5>
+							<pre><code>i = 0;
+
+while (!deck.isInOrder()) {
+print 'Iteration ' + i;
+deck.shuffle();
+i++;
+}
+
+print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
+						</section>
+
+						<section>
+							<h4>Lists</h4>
+							<div class="row">
+								<div class="col-6 col-12-xsmall">
+									<h5>Unordered</h5>
+									<ul>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+									<h5>Alternate</h5>
+									<ul class="alt">
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Sagittis adipiscing lorem eleifend.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-xsmall">
+									<h5>Ordered</h5>
+									<ol>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+										<li>Dolor pulvinar etiam magna etiam.</li>
+										<li>Etiam vel felis at lorem sed viverra.</li>
+										<li>Felis enim feugiat dolore viverra.</li>
+									</ol>
+									<h5>Icons</h5>
+									<ul class="icons">
+										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+										<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+										<li><a href="#" class="icon brands fa-tumblr"><span class="label">Tumblr</span></a></li>
+									</ul>
+								</div>
+							</div>
+							<h5>Actions</h5>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Default</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions small">
+								<li><a href="#" class="button primary small">Small</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<div class="row">
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary">Default</a></li>
+										<li><a href="#" class="button">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small">Small</a></li>
+										<li><a href="#" class="button small">Small</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary fit">Default</a></li>
+										<li><a href="#" class="button fit">Default</a></li>
+									</ul>
+								</div>
+								<div class="col-6 col-12-small">
+									<ul class="actions stacked">
+										<li><a href="#" class="button primary small fit">Small</a></li>
+										<li><a href="#" class="button small fit">Small</a></li>
+									</ul>
+								</div>
+							</div>
+						</section>
+
+						<section>
+							<h4>Table</h4>
+							<h5>Default</h5>
+							<div class="table-wrapper">
+								<table>
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+
+							<h5>Alternate</h5>
+							<div class="table-wrapper">
+								<table class="alt">
+									<thead>
+										<tr>
+											<th>Name</th>
+											<th>Description</th>
+											<th>Price</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>Item One</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Two</td>
+											<td>Vis ac commodo adipiscing arcu aliquet.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Three</td>
+											<td> Morbi faucibus arcu accumsan lorem.</td>
+											<td>29.99</td>
+										</tr>
+										<tr>
+											<td>Item Four</td>
+											<td>Vitae integer tempus condimentum.</td>
+											<td>19.99</td>
+										</tr>
+										<tr>
+											<td>Item Five</td>
+											<td>Ante turpis integer aliquet porttitor.</td>
+											<td>29.99</td>
+										</tr>
+									</tbody>
+									<tfoot>
+										<tr>
+											<td colspan="2"></td>
+											<td>100.00</td>
+										</tr>
+									</tfoot>
+								</table>
+							</div>
+						</section>
+
+						<section>
+							<h4>Buttons</h4>
+							<ul class="actions">
+								<li><a href="#" class="button primary">Primary</a></li>
+								<li><a href="#" class="button">Default</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button large">Large</a></li>
+								<li><a href="#" class="button">Default</a></li>
+								<li><a href="#" class="button small">Small</a></li>
+							</ul>
+							<ul class="actions fit">
+								<li><a href="#" class="button primary fit">Fit</a></li>
+								<li><a href="#" class="button fit">Fit</a></li>
+							</ul>
+							<ul class="actions fit small">
+								<li><a href="#" class="button primary fit small">Fit + Small</a></li>
+								<li><a href="#" class="button fit small">Fit + Small</a></li>
+							</ul>
+							<ul class="actions">
+								<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
+								<li><a href="#" class="button icon solid fa-download">Icon</a></li>
+							</ul>
+							<ul class="actions">
+								<li><span class="button primary disabled">Primary</span></li>
+								<li><span class="button disabled">Default</span></li>
+							</ul>
+						</section>
+
+						<section>
+							<h4>Form</h4>
+							<form method="post" action="#">
+								<div class="row gtr-uniform gtr-50">
+									<div class="col-6 col-12-xsmall">
+										<input type="text" name="demo-name" id="demo-name" value="" placeholder="Name" />
+									</div>
+									<div class="col-6 col-12-xsmall">
+										<input type="email" name="demo-email" id="demo-email" value="" placeholder="Email" />
+									</div>
+									<div class="col-12">
+										<select name="demo-category" id="demo-category">
+											<option value="">- Category -</option>
+											<option value="1">Manufacturing</option>
+											<option value="1">Shipping</option>
+											<option value="1">Administration</option>
+											<option value="1">Human Resources</option>
+										</select>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-low" name="demo-priority" checked>
+										<label for="demo-priority-low">Low Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-normal" name="demo-priority">
+										<label for="demo-priority-normal">Normal Priority</label>
+									</div>
+									<div class="col-4 col-12-small">
+										<input type="radio" id="demo-priority-high" name="demo-priority">
+										<label for="demo-priority-high">High Priority</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-copy" name="demo-copy">
+										<label for="demo-copy">Email me a copy of this message</label>
+									</div>
+									<div class="col-6 col-12-small">
+										<input type="checkbox" id="demo-human" name="demo-human" checked>
+										<label for="demo-human">I am a human and not a robot</label>
+									</div>
+									<div class="col-12">
+										<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
+									</div>
+									<div class="col-12">
+										<ul class="actions">
+											<li><input type="submit" value="Send Message" class="primary" /></li>
+											<li><input type="reset" value="Reset" /></li>
+										</ul>
+									</div>
+								</div>
+							</form>
+						</section>
+
+						<section>
+							<h4>Image</h4>
+							<h5>Fit</h5>
+							<div class="box alt">
+								<div class="row gtr-50 gtr-uniform">
+									<div class="col-12"><span class="image fit"><img src="images/fulls/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/04.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/05.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/06.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/03.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/02.jpg" alt="" /></span></div>
+									<div class="col-4"><span class="image fit"><img src="images/thumbs/01.jpg" alt="" /></span></div>
+								</div>
+							</div>
+							<h5>Left &amp; Right</h5>
+							<p><span class="image left"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+							<p><span class="image right"><img src="images/avatar.jpg" alt="" /></span>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent tincidunt felis sagittis eget. tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan eu faucibus. Integer ac pellentesque praesent.</p>
+						</section>
+
+					</section>
+				-->
+
+			</div>
+
+		<!-- Footer -->
+			<footer id="footer">
+				<div class="inner">
+					<ul class="icons">
+					
+					</ul>
+					<ul class="copyright">
+						<li>&copy; F. Springer 2022</li><li></a></li>
+					</ul>
+				</div>
+			</footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.poptrox.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>
